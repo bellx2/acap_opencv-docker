@@ -17,7 +17,7 @@ set(OpenCV_DIR /opt/opencv/share/OpenCV)
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIRS})
-target_link_libraries(app ${OpenCV_LIBS}
+target_link_libraries(app ${OpenCV_LIBS})
 
 link_directories(/opt/opencv/share/lib)
 ```
