@@ -1,4 +1,4 @@
-NAME := bellx2/acap_opencv:3.4.2-armv7hf
+NAME := bellx2/acap_opencv:native-1.3-armv7hf
 
 image:
 	docker build -t $(NAME) .
