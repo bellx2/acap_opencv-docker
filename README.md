@@ -12,13 +12,11 @@ https://hub.docker.com/r/axisecp/acap-native-sdk
 ## cmake
 
 ```cmake
-set(OpenCV_DIR /opt/lib/)
-find_package(OpenCV REQUIRED)
-include_directories(${OpenCV_INCLUDE_DIRS})
-link_directories(${OpenCV_LIBRARY_DIRS})
-target_link_libraries(app ${OpenCV_LIBS})
-
+include_directories(/opt/app/include)
 link_directories(/opt/app/lib)
+
+add_executable(app main.cpp)
+target_link_libraries(app opencv_core opencv_imgcodecs opencv_imgproc)
 ```
 
 ## DockerHub
