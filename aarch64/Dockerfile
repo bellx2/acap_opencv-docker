@@ -36,14 +36,14 @@ ENV COMMON_CMAKE_FLAGS="-S $OPENCV_SRC_DIR \
         -D WITH_FFMPEG=OFF \
         -D WITH_GSTREAMER=OFF \
         -D WITH_GSTREAMER_0_10=OFF \
-        -D BUILD_LIST=core,imgproc,video,imgcodecs \
+        -D BUILD_LIST=core,imgproc,imgcodecs,videoio,video,dnn \
         -D BUILD_EXAMPLES=OFF \
         -D BUILD_OPENCV_APPS=OFF \
         -D BUILD_DOCS=OFF \
         -D BUILD_JPEG=ON \
         -D BUILD_PNG=OFF \
         -D WITH_JASPER=OFF \
-        -D BUILD_PROTOBUF=OFF \
+        -D BUILD_PROTOBUF=ON \
         -D OPENCV_GENERATE_PKGCONFIG=ON "
 
 RUN . /opt/axis/acapsdk/environment-setup* && cmake \
