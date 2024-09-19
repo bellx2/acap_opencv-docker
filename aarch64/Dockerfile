@@ -1,10 +1,10 @@
 ARG ARCH=aarch64
-ARG VERSION=1.3
+ARG VERSION=1.15
 ARG UBUNTU_VERSION=22.04
 ARG REPO=axisecp
 ARG SDK=acap-native-sdk
 
-FROM ${REPO}/${SDK}:${VERSION}-${ARCH}-ubuntu${UBUNTU_VERSION} as builder
+FROM ${REPO}/${SDK}:${VERSION}-${ARCH}-ubuntu${UBUNTU_VERSION} AS builder
 
 # Set general arguments
 ARG SDK_LIB_PATH_BASE=/opt/axis/acapsdk/sysroots/${ARCH}/usr

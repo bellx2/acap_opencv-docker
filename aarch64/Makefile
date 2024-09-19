@@ -1,10 +1,7 @@
-NAME := bellx2/acap_opencv:native-1.3-aarch64
+NAME := bellx2/acap_opencv:native-1.15-aarch64
 
 image:
 	docker build -t $(NAME) .
-
-scan:
-	docker scan $(NAME)
 
 push:
 	docker push $(NAME)
